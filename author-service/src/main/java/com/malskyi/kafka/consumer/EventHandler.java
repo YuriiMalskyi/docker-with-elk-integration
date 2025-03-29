@@ -29,14 +29,18 @@ public class EventHandler {
             if (event instanceof BookCreatedEvent) {
                 handleBookCreatedEvent((BookCreatedEvent) event);
             } else {
-                log.error("Could not process event due to no supported resolver found. Event: {}", o);
+                log.error("Could not process event due to no supported resolver found. Event: {}", event);
             }
+            log.info("Event handled successfully!");
         }
     }
 
     private void handleBookCreatedEvent(BookCreatedEvent bookCreatedEvent) {
+        log.info("Handling BookCreatedEvent event: [{}]", bookCreatedEvent);
         BookInfoEntity bookInfoEntity = map(bookCreatedEvent);
+        log.debug("Saving new record to booksInfo table: [{}]", bookInfoEntity);
         booksInfoEntityRepository.save(bookInfoEntity);
+        log.debug("Successfully saved new record to booksInfo table: [{}]", bookInfoEntity);
     }
 
     private BookInfoEntity map(BookCreatedEvent bookCreatedEvent) {

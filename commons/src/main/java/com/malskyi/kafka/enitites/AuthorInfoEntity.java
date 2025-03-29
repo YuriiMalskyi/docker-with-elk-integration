@@ -22,4 +22,13 @@ public class AuthorInfoEntity {
 
     @OneToMany(mappedBy = "authorInfoEntity")
     private List<BookEntity> bookEntities;
+
+    @Override
+    public String toString() {
+        return "AuthorInfoEntity{" +
+                "lastName='" + lastName + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", authorId=" + authorId +
+                '}';
+    }
 }

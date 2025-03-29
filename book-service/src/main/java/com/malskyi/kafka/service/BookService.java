@@ -1,7 +1,7 @@
 package com.malskyi.kafka.service;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.malskyi.kafka.controller.model.BookRequestDto;
+import com.malskyi.kafka.controller.model.BookResponseDto;
 import com.malskyi.kafka.enitites.AuthorInfoEntity;
 import com.malskyi.kafka.enitites.BookEntity;
 import com.malskyi.kafka.events.BookCreatedEvent;
@@ -9,9 +9,7 @@ import com.malskyi.kafka.exception.AuthorNotFoundException;
 import com.malskyi.kafka.exception.BookNotFoundException;
 import com.malskyi.kafka.repository.AuthorInfoEntityRepository;
 import com.malskyi.kafka.repository.BookEntityRepository;
-import com.malskyi.kafka.controller.model.BookResponseDto;
 import com.malskyi.kafka.service.publisher.KafkaEventPublisher;
-import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -43,7 +41,9 @@ public class BookService {
 
     public BookResponseDto saveBook(BookRequestDto bookRequestDto) {
         final BookEntity newBook = buildBook(bookRequestDto);
+        log.info("Saving new book: {}", newBook);
         final BookEntity createdBook = bookEntityRepository.save(newBook);
+        log.info("Book saved with ID: {}", createdBook.getBookId());
 
         bookEventPublisher.publish(bookEventTopicName, createdBook.getBookId().toString(),
                 buildBookCreatedEvent(createdBook), Map.of("eventType", BookCreatedEvent.class.getName()));
