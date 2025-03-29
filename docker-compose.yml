@@ -38,8 +38,6 @@ services:
 #      SPRING_DATASOURCE_URL: jdbc:mysql://host.docker.internal:3306/book_db
       SPRING_DATASOURCE_USERNAME: root
       SPRING_DATASOURCE_PASSWORD: root
-      ELASTICSEARCH_USERNAME: elastic
-      ELASTICSEARCH_PASSWORD: LZPeB+hiUiTIOPCmdNPC
     depends_on:
       - broker
     networks:
@@ -62,8 +60,6 @@ services:
       SPRING_DATASOURCE_URL: jdbc:mysql://192.168.1.40:3306/author_db
       SPRING_DATASOURCE_USERNAME: root
       SPRING_DATASOURCE_PASSWORD: root
-      ELASTICSEARCH_USERNAME: elastic
-      ELASTICSEARCH_PASSWORD: LZPeB+hiUiTIOPCmdNPC
     depends_on:
       - broker
     networks:
