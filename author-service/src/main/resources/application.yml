@@ -20,5 +20,5 @@ logging:
       apache:
         kafka: INFO
   file:
-    name: /var/log/author-service/author-service.log
-    pattern: /var/log/author-service/author-service.%d{yyyy-MM-dd}.%i.log
+    name: /var/log/author-service/author-service
+    pattern: /var/log/author-service/author-service
