@@ -24,13 +24,10 @@ public class EventHandler {
     // BookCreatedHandler
 
     public void handleEvents(List<Object> events) {
-        for (int i = 0; i < events.size(); i++) {
-            if (i == 1){
-                throw new RuntimeException();
-            }
-            Object o = events.get(i);
-            if (o instanceof BookCreatedEvent) {
-                handleBookCreatedEvent((BookCreatedEvent) o);
+        log.info("Processing events: [{}]", events);
+        for (Object event : events) {
+            if (event instanceof BookCreatedEvent) {
+                handleBookCreatedEvent((BookCreatedEvent) event);
             } else {
                 log.error("Could not process event due to no supported resolver found. Event: {}", o);
             }
