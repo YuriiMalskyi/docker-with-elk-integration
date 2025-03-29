@@ -1,6 +1,0 @@
-com\malskyi\kafka\enitites\AuthorInfoEntity.class
-com\malskyi\kafka\enitites\AuthorEntity.class
-com\malskyi\kafka\events\BookCreatedEvent.class
-com\malskyi\kafka\enitites\BookEntity.class
-com\malskyi\kafka\enitites\BookInfoEntity.class
-com\malskyi\kafka\utils\JsonUtil.class
