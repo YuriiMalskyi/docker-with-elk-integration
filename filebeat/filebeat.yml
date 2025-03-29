@@ -1,0 +1,22 @@
+setup.template.name: "custom-filebeat"
+setup.template.pattern: "custom-filebeat-*"
+
+output.logstash:
+  hosts: ["192.168.1.147:5044"]
+
+setup.kibana:
+  host: "http://192.168.1.147:5601"
+
+filebeat.inputs:
+  - type: log
+    paths:
+      - "/var/log/book-service/*.log"
+    fields:
+      service: book-service
+    fields_under_root: true
+  - type: log
+    paths:
+      - "/var/log/author-service/*.log"
+    fields:
+      service: author-service
+    fields_under_root: true

@@ -1,0 +1,13 @@
+services:
+  filebeat:
+    build:
+      context: ./filebeat
+      dockerfile: Dockerfile
+    container_name: filebeat
+    user: root  # Required for accessing log files in mounted volumes
+    network_mode: host
+    volumes:
+      - D:\docker-logs\book-service:/var/log/book-service:ro
+      - D:\docker-logs\author-service:/var/log/author-service:ro
+    environment:
+      - ELASTICSEARCH_HOSTS=http://192.168.1.147:9200
