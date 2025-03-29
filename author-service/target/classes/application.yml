@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: server
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: false
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+com:
+  malskyi:
+    kafka:
+      topic:
+        bookBus:
+          name: book-events
+logging:
+  level:
+    org:
+      springframework: INFO
+      apache:
+        kafka: INFO
+  file:
+    name: /var/log/author-service/author-service.log
+    pattern: /var/log/author-service/author-service.%d{yyyy-MM-dd}.%i.log

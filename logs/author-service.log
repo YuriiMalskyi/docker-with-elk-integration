@@ -1,0 +1,484 @@
+2025-03-28 18:36:22.976 INFO c.m.k.AuthorServiceApp [main] Starting AuthorServiceApp using Java 17.0.11 on YuriiPC with PID 24336 (F:\projects\java\docker-kafka-producer-consumer\author-service\target\classes started by Yurii in F:\projects\java\docker-kafka-producer-consumer)
+2025-03-28 18:36:22.986 INFO c.m.k.AuthorServiceApp [main] The following 1 profile is active: "local"
+2025-03-28 18:36:23.454 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-28 18:36:23.508 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 40 ms. Found 2 JPA repository interfaces.
+2025-03-28 18:36:23.995 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8081 (http)
+2025-03-28 18:36:24.009 INFO o.a.c.h.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8081"]
+2025-03-28 18:36:24.011 INFO o.a.c.c.StandardService [main] Starting service [Tomcat]
+2025-03-28 18:36:24.011 INFO o.a.c.c.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.83]
+2025-03-28 18:36:24.102 INFO o.a.c.c.C.[.[.[/] [main] Initializing Spring embedded WebApplicationContext
+2025-03-28 18:36:24.102 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1079 ms
+2025-03-28 18:36:24.214 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-28 18:36:24.259 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 5.6.15.Final
+2025-03-28 18:36:24.383 INFO o.h.a.c.Version [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2025-03-28 18:36:24.473 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2025-03-28 18:36:24.685 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2025-03-28 18:36:24.707 INFO o.h.d.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2025-03-28 18:36:25.173 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-03-28 18:36:25.179 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-28 18:36:25.456 INFO o.a.k.c.c.ConsumerConfig [main] ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-authorService-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = authorService
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2025-03-28 18:36:25.499 INFO o.a.k.c.t.i.KafkaMetricsCollector [main] initializing Kafka metrics collector
+2025-03-28 18:36:25.569 INFO o.a.k.c.u.AppInfoParser [main] Kafka version: 3.7.1
+2025-03-28 18:36:25.569 INFO o.a.k.c.u.AppInfoParser [main] Kafka commitId: e2494e6ffb89f828
+2025-03-28 18:36:25.569 INFO o.a.k.c.u.AppInfoParser [main] Kafka startTimeMs: 1743179785568
+2025-03-28 18:36:25.576 INFO o.a.k.c.c.i.LegacyKafkaConsumer [main] [Consumer clientId=consumer-authorService-1, groupId=authorService] Subscribed to topic(s): book-events
+2025-03-28 18:36:25.615 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-28 18:36:25.920 INFO o.a.c.h.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-8081"]
+2025-03-28 18:36:25.931 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8081 (http) with context path ''
+2025-03-28 18:36:25.940 INFO c.m.k.AuthorServiceApp [main] Started AuthorServiceApp in 3.344 seconds (JVM running for 3.899)
+2025-03-28 18:36:26.277 INFO o.a.k.c.Metadata [scheduling-1] [Consumer clientId=consumer-authorService-1, groupId=authorService] Cluster ID: 5L6g3nShT-eMCtK--X86sw
+2025-03-28 18:36:26.278 INFO o.a.k.c.c.i.ConsumerCoordinator [scheduling-1] [Consumer clientId=consumer-authorService-1, groupId=authorService] Discovered group coordinator 192.168.1.40:9092 (id: 2147483646 rack: null)
+2025-03-28 18:36:26.280 INFO o.a.k.c.c.i.ConsumerCoordinator [scheduling-1] [Consumer clientId=consumer-authorService-1, groupId=authorService] (Re-)joining group
+2025-03-28 18:36:26.290 INFO o.a.k.c.c.i.ConsumerCoordinator [scheduling-1] [Consumer clientId=consumer-authorService-1, groupId=authorService] Request joining group due to: need to re-join with the given member-id: consumer-authorService-1-7d991163-0d13-451f-a891-888916131f99
+2025-03-28 18:36:26.291 INFO o.a.k.c.c.i.ConsumerCoordinator [scheduling-1] [Consumer clientId=consumer-authorService-1, groupId=authorService] (Re-)joining group
+2025-03-28 18:37:04.211 INFO o.a.k.c.c.i.ConsumerCoordinator [scheduling-1] [Consumer clientId=consumer-authorService-1, groupId=authorService] Successfully joined group with generation Generation{generationId=2, memberId='consumer-authorService-1-7d991163-0d13-451f-a891-888916131f99', protocol='range'}
+2025-03-28 18:37:04.217 INFO o.a.k.c.c.i.ConsumerCoordinator [scheduling-1] [Consumer clientId=consumer-authorService-1, groupId=authorService] Finished assignment for group at generation 2: {consumer-authorService-1-7d991163-0d13-451f-a891-888916131f99=Assignment(partitions=[book-events-0])}
+2025-03-28 18:37:04.223 INFO o.a.k.c.c.i.ConsumerCoordinator [scheduling-1] [Consumer clientId=consumer-authorService-1, groupId=authorService] Successfully synced group in generation Generation{generationId=2, memberId='consumer-authorService-1-7d991163-0d13-451f-a891-888916131f99', protocol='range'}
+2025-03-28 18:37:04.224 INFO o.a.k.c.c.i.ConsumerCoordinator [scheduling-1] [Consumer clientId=consumer-authorService-1, groupId=authorService] Notifying assignor about the new Assignment(partitions=[book-events-0])
+2025-03-28 18:37:04.226 INFO o.a.k.c.c.i.ConsumerRebalanceListenerInvoker [scheduling-1] [Consumer clientId=consumer-authorService-1, groupId=authorService] Adding newly assigned partitions: book-events-0
+2025-03-28 18:37:04.233 INFO o.a.k.c.c.i.ConsumerCoordinator [scheduling-1] [Consumer clientId=consumer-authorService-1, groupId=authorService] Found no committed offset for partition book-events-0
+2025-03-28 18:37:04.242 INFO o.a.k.c.c.i.SubscriptionState [scheduling-1] [Consumer clientId=consumer-authorService-1, groupId=authorService] Resetting offset for partition book-events-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[192.168.1.40:9092 (id: 1 rack: null)], epoch=0}}.
+2025-03-28 18:37:42.908 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-28 18:37:42.909 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2025-03-28 18:37:42.908 ERROR o.s.s.s.TaskUtils$LoggingErrorHandler [scheduling-1] Unexpected error occurred in scheduled task
+org.apache.kafka.common.errors.InterruptException: java.lang.InterruptedException
+	at org.apache.kafka.clients.consumer.internals.ConsumerNetworkClient.maybeThrowInterruptException(ConsumerNetworkClient.java:536) ~[kafka-clients-3.7.1.jar:?]
+	at org.apache.kafka.clients.consumer.internals.ConsumerNetworkClient.poll(ConsumerNetworkClient.java:297) ~[kafka-clients-3.7.1.jar:?]
+	at org.apache.kafka.clients.consumer.internals.ConsumerNetworkClient.poll(ConsumerNetworkClient.java:252) ~[kafka-clients-3.7.1.jar:?]
+	at org.apache.kafka.clients.consumer.internals.LegacyKafkaConsumer.pollForFetches(LegacyKafkaConsumer.java:686) ~[kafka-clients-3.7.1.jar:?]
+	at org.apache.kafka.clients.consumer.internals.LegacyKafkaConsumer.poll(LegacyKafkaConsumer.java:617) ~[kafka-clients-3.7.1.jar:?]
+	at org.apache.kafka.clients.consumer.internals.LegacyKafkaConsumer.poll(LegacyKafkaConsumer.java:590) ~[kafka-clients-3.7.1.jar:?]
+	at org.apache.kafka.clients.consumer.KafkaConsumer.poll(KafkaConsumer.java:874) ~[kafka-clients-3.7.1.jar:?]
+	at com.malskyi.kafka.consumer.EventConsumerService.consumeBookBusMessages(EventConsumerService.java:50) ~[classes/:?]
+	at jdk.internal.reflect.GeneratedMethodAccessor14.invoke(Unknown Source) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84) ~[spring-context-5.3.31.jar:5.3.31]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-5.3.31.jar:5.3.31]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) ~[?:?]
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305) ~[?:?]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305) ~[?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[?:?]
+	at java.lang.Thread.run(Thread.java:842) ~[?:?]
+Caused by: java.lang.InterruptedException
+	... 19 more
+2025-03-28 18:37:42.915 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2025-03-28 18:37:44.652 INFO c.m.k.AuthorServiceApp [main] Starting AuthorServiceApp using Java 17.0.11 on YuriiPC with PID 4004 (F:\projects\java\docker-kafka-producer-consumer\author-service\target\classes started by Yurii in F:\projects\java\docker-kafka-producer-consumer)
+2025-03-28 18:37:44.660 INFO c.m.k.AuthorServiceApp [main] The following 1 profile is active: "local"
+2025-03-28 18:37:45.118 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-28 18:37:45.159 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 34 ms. Found 2 JPA repository interfaces.
+2025-03-28 18:37:45.640 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8081 (http)
+2025-03-28 18:37:45.654 INFO o.a.c.h.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8081"]
+2025-03-28 18:37:45.656 INFO o.a.c.c.StandardService [main] Starting service [Tomcat]
+2025-03-28 18:37:45.656 INFO o.a.c.c.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.83]
+2025-03-28 18:37:45.745 INFO o.a.c.c.C.[.[.[/] [main] Initializing Spring embedded WebApplicationContext
+2025-03-28 18:37:45.745 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1046 ms
+2025-03-28 18:37:45.870 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-28 18:37:45.913 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 5.6.15.Final
+2025-03-28 18:37:46.025 INFO o.h.a.c.Version [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2025-03-28 18:37:46.105 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2025-03-28 18:37:46.328 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2025-03-28 18:37:46.354 INFO o.h.d.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2025-03-28 18:37:46.795 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-03-28 18:37:46.803 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-28 18:37:47.061 INFO o.a.k.c.c.ConsumerConfig [main] ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-authorService-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = authorService
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2025-03-28 18:37:47.104 INFO o.a.k.c.t.i.KafkaMetricsCollector [main] initializing Kafka metrics collector
+2025-03-28 18:37:47.181 INFO o.a.k.c.u.AppInfoParser [main] Kafka version: 3.7.1
+2025-03-28 18:37:47.181 INFO o.a.k.c.u.AppInfoParser [main] Kafka commitId: e2494e6ffb89f828
+2025-03-28 18:37:47.181 INFO o.a.k.c.u.AppInfoParser [main] Kafka startTimeMs: 1743179867180
+2025-03-28 18:37:47.187 INFO o.a.k.c.c.i.LegacyKafkaConsumer [main] [Consumer clientId=consumer-authorService-1, groupId=authorService] Subscribed to topic(s): book-events
+2025-03-28 18:37:47.227 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-28 18:37:47.520 INFO o.a.c.h.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-8081"]
+2025-03-28 18:37:47.530 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8081 (http) with context path ''
+2025-03-28 18:37:47.539 INFO c.m.k.AuthorServiceApp [main] Started AuthorServiceApp in 3.27 seconds (JVM running for 3.822)
+2025-03-28 18:37:47.837 INFO o.a.k.c.Metadata [scheduling-1] [Consumer clientId=consumer-authorService-1, groupId=authorService] Cluster ID: 5L6g3nShT-eMCtK--X86sw
+2025-03-28 18:37:47.838 INFO o.a.k.c.c.i.ConsumerCoordinator [scheduling-1] [Consumer clientId=consumer-authorService-1, groupId=authorService] Discovered group coordinator 192.168.1.40:9092 (id: 2147483646 rack: null)
+2025-03-28 18:37:47.840 INFO o.a.k.c.c.i.ConsumerCoordinator [scheduling-1] [Consumer clientId=consumer-authorService-1, groupId=authorService] (Re-)joining group
+2025-03-28 18:37:47.848 INFO o.a.k.c.c.i.ConsumerCoordinator [scheduling-1] [Consumer clientId=consumer-authorService-1, groupId=authorService] Request joining group due to: need to re-join with the given member-id: consumer-authorService-1-76eb8a7e-9305-4b61-ab92-e8e900887b96
+2025-03-28 18:37:47.849 INFO o.a.k.c.c.i.ConsumerCoordinator [scheduling-1] [Consumer clientId=consumer-authorService-1, groupId=authorService] (Re-)joining group
+2025-03-28 18:38:22.713 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-28 18:38:22.715 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2025-03-28 18:38:22.712 ERROR o.s.s.s.TaskUtils$LoggingErrorHandler [scheduling-1] Unexpected error occurred in scheduled task
+org.apache.kafka.common.errors.InterruptException: java.lang.InterruptedException
+	at org.apache.kafka.clients.consumer.internals.ConsumerNetworkClient.maybeThrowInterruptException(ConsumerNetworkClient.java:536) ~[kafka-clients-3.7.1.jar:?]
+	at org.apache.kafka.clients.consumer.internals.ConsumerNetworkClient.poll(ConsumerNetworkClient.java:297) ~[kafka-clients-3.7.1.jar:?]
+	at org.apache.kafka.clients.consumer.internals.ConsumerNetworkClient.poll(ConsumerNetworkClient.java:252) ~[kafka-clients-3.7.1.jar:?]
+	at org.apache.kafka.clients.consumer.internals.LegacyKafkaConsumer.pollForFetches(LegacyKafkaConsumer.java:686) ~[kafka-clients-3.7.1.jar:?]
+	at org.apache.kafka.clients.consumer.internals.LegacyKafkaConsumer.poll(LegacyKafkaConsumer.java:617) ~[kafka-clients-3.7.1.jar:?]
+	at org.apache.kafka.clients.consumer.internals.LegacyKafkaConsumer.poll(LegacyKafkaConsumer.java:590) ~[kafka-clients-3.7.1.jar:?]
+	at org.apache.kafka.clients.consumer.KafkaConsumer.poll(KafkaConsumer.java:874) ~[kafka-clients-3.7.1.jar:?]
+	at com.malskyi.kafka.consumer.EventConsumerService.consumeBookBusMessages(EventConsumerService.java:50) ~[classes/:?]
+	at jdk.internal.reflect.GeneratedMethodAccessor14.invoke(Unknown Source) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84) ~[spring-context-5.3.31.jar:5.3.31]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-5.3.31.jar:5.3.31]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) ~[?:?]
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305) ~[?:?]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305) ~[?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[?:?]
+	at java.lang.Thread.run(Thread.java:842) ~[?:?]
+Caused by: java.lang.InterruptedException
+	... 19 more
+2025-03-28 18:38:22.723 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2025-03-28 22:50:58.458 INFO c.m.k.AuthorServiceApp [main] Starting AuthorServiceApp using Java 17.0.11 on YuriiPC with PID 2388 (F:\projects\java\docker-kafka-producer-consumer\author-service\target\classes started by Yurii in F:\projects\java\docker-kafka-producer-consumer)
+2025-03-28 22:50:58.467 INFO c.m.k.AuthorServiceApp [main] The following 1 profile is active: "local"
+2025-03-28 22:50:59.080 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-28 22:50:59.123 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 34 ms. Found 2 JPA repository interfaces.
+2025-03-28 22:50:59.651 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8081 (http)
+2025-03-28 22:50:59.663 INFO o.a.c.h.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8081"]
+2025-03-28 22:50:59.665 INFO o.a.c.c.StandardService [main] Starting service [Tomcat]
+2025-03-28 22:50:59.666 INFO o.a.c.c.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.83]
+2025-03-28 22:50:59.743 INFO o.a.c.c.C.[.[.[/] [main] Initializing Spring embedded WebApplicationContext
+2025-03-28 22:50:59.743 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1228 ms
+2025-03-28 22:50:59.876 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-28 22:50:59.935 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 5.6.15.Final
+2025-03-28 22:51:00.069 INFO o.h.a.c.Version [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2025-03-28 22:51:00.161 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2025-03-28 22:51:00.444 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2025-03-28 22:51:00.467 INFO o.h.d.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2025-03-28 22:51:00.918 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-03-28 22:51:00.924 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-28 22:51:01.187 INFO o.a.k.c.c.ConsumerConfig [main] ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-authorService-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = authorService
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2025-03-28 22:51:01.237 INFO o.a.k.c.t.i.KafkaMetricsCollector [main] initializing Kafka metrics collector
+2025-03-28 22:51:01.336 INFO o.a.k.c.u.AppInfoParser [main] Kafka version: 3.7.1
+2025-03-28 22:51:01.336 INFO o.a.k.c.u.AppInfoParser [main] Kafka commitId: e2494e6ffb89f828
+2025-03-28 22:51:01.336 INFO o.a.k.c.u.AppInfoParser [main] Kafka startTimeMs: 1743195061332
+2025-03-28 22:51:01.339 INFO o.a.k.c.c.i.LegacyKafkaConsumer [main] [Consumer clientId=consumer-authorService-1, groupId=authorService] Subscribed to topic(s): book-events
+2025-03-28 22:51:01.374 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-28 22:51:01.674 INFO o.a.c.h.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-8081"]
+2025-03-28 22:51:01.687 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8081 (http) with context path ''
+2025-03-28 22:51:01.695 INFO c.m.k.AuthorServiceApp [main] Started AuthorServiceApp in 3.664 seconds (JVM running for 4.42)
+2025-03-28 22:51:02.074 INFO o.a.k.c.Metadata [scheduling-1] [Consumer clientId=consumer-authorService-1, groupId=authorService] Cluster ID: 5L6g3nShT-eMCtK--X86sw
+2025-03-28 22:51:02.074 INFO o.a.k.c.c.i.ConsumerCoordinator [scheduling-1] [Consumer clientId=consumer-authorService-1, groupId=authorService] Discovered group coordinator 192.168.1.40:9092 (id: 2147483646 rack: null)
+2025-03-28 22:51:02.077 INFO o.a.k.c.c.i.ConsumerCoordinator [scheduling-1] [Consumer clientId=consumer-authorService-1, groupId=authorService] (Re-)joining group
+2025-03-28 22:51:02.094 INFO o.a.k.c.c.i.ConsumerCoordinator [scheduling-1] [Consumer clientId=consumer-authorService-1, groupId=authorService] Request joining group due to: need to re-join with the given member-id: consumer-authorService-1-daeb6bbe-067e-4525-adaa-f1e46c2eca0c
+2025-03-28 22:51:02.094 INFO o.a.k.c.c.i.ConsumerCoordinator [scheduling-1] [Consumer clientId=consumer-authorService-1, groupId=authorService] (Re-)joining group
+2025-03-28 22:51:02.101 INFO o.a.k.c.c.i.ConsumerCoordinator [scheduling-1] [Consumer clientId=consumer-authorService-1, groupId=authorService] Successfully joined group with generation Generation{generationId=1, memberId='consumer-authorService-1-daeb6bbe-067e-4525-adaa-f1e46c2eca0c', protocol='range'}
+2025-03-28 22:51:02.111 INFO o.a.k.c.c.i.ConsumerCoordinator [scheduling-1] [Consumer clientId=consumer-authorService-1, groupId=authorService] Finished assignment for group at generation 1: {consumer-authorService-1-daeb6bbe-067e-4525-adaa-f1e46c2eca0c=Assignment(partitions=[book-events-0])}
+2025-03-28 22:51:02.121 INFO o.a.k.c.c.i.ConsumerCoordinator [scheduling-1] [Consumer clientId=consumer-authorService-1, groupId=authorService] Successfully synced group in generation Generation{generationId=1, memberId='consumer-authorService-1-daeb6bbe-067e-4525-adaa-f1e46c2eca0c', protocol='range'}
+2025-03-28 22:51:02.121 INFO o.a.k.c.c.i.ConsumerCoordinator [scheduling-1] [Consumer clientId=consumer-authorService-1, groupId=authorService] Notifying assignor about the new Assignment(partitions=[book-events-0])
+2025-03-28 22:51:02.124 INFO o.a.k.c.c.i.ConsumerRebalanceListenerInvoker [scheduling-1] [Consumer clientId=consumer-authorService-1, groupId=authorService] Adding newly assigned partitions: book-events-0
+2025-03-28 22:51:02.132 INFO o.a.k.c.c.i.ConsumerCoordinator [scheduling-1] [Consumer clientId=consumer-authorService-1, groupId=authorService] Found no committed offset for partition book-events-0
+2025-03-28 22:51:02.143 INFO o.a.k.c.c.i.SubscriptionState [scheduling-1] [Consumer clientId=consumer-authorService-1, groupId=authorService] Resetting offset for partition book-events-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[192.168.1.40:9092 (id: 1 rack: null)], epoch=0}}.
+2025-03-28 23:00:02.106 INFO o.a.k.c.NetworkClient [scheduling-1] [Consumer clientId=consumer-authorService-1, groupId=authorService] Node -1 disconnected.
+2025-03-28 23:10:02.134 INFO o.a.k.c.NetworkClient [scheduling-1] [Consumer clientId=consumer-authorService-1, groupId=authorService] Node -1 disconnected.
+2025-03-28 23:55:54.815 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-28 23:55:54.817 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2025-03-28 23:55:54.814 ERROR o.s.s.s.TaskUtils$LoggingErrorHandler [scheduling-1] Unexpected error occurred in scheduled task
+org.apache.kafka.common.errors.InterruptException: java.lang.InterruptedException
+	at org.apache.kafka.clients.consumer.internals.ConsumerNetworkClient.maybeThrowInterruptException(ConsumerNetworkClient.java:536) ~[kafka-clients-3.7.1.jar:?]
+	at org.apache.kafka.clients.consumer.internals.ConsumerNetworkClient.poll(ConsumerNetworkClient.java:297) ~[kafka-clients-3.7.1.jar:?]
+	at org.apache.kafka.clients.consumer.internals.ConsumerNetworkClient.poll(ConsumerNetworkClient.java:252) ~[kafka-clients-3.7.1.jar:?]
+	at org.apache.kafka.clients.consumer.internals.LegacyKafkaConsumer.pollForFetches(LegacyKafkaConsumer.java:686) ~[kafka-clients-3.7.1.jar:?]
+	at org.apache.kafka.clients.consumer.internals.LegacyKafkaConsumer.poll(LegacyKafkaConsumer.java:617) ~[kafka-clients-3.7.1.jar:?]
+	at org.apache.kafka.clients.consumer.internals.LegacyKafkaConsumer.poll(LegacyKafkaConsumer.java:590) ~[kafka-clients-3.7.1.jar:?]
+	at org.apache.kafka.clients.consumer.KafkaConsumer.poll(KafkaConsumer.java:874) ~[kafka-clients-3.7.1.jar:?]
+	at com.malskyi.kafka.consumer.EventConsumerService.consumeBookBusMessages(EventConsumerService.java:50) ~[classes/:?]
+	at jdk.internal.reflect.GeneratedMethodAccessor14.invoke(Unknown Source) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84) ~[spring-context-5.3.31.jar:5.3.31]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-5.3.31.jar:5.3.31]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) ~[?:?]
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305) ~[?:?]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305) ~[?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[?:?]
+	at java.lang.Thread.run(Thread.java:842) ~[?:?]
+Caused by: java.lang.InterruptedException
+	... 19 more
+2025-03-28 23:55:54.824 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.

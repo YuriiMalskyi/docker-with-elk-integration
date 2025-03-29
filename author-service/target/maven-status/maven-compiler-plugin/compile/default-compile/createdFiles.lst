@@ -1,0 +1,14 @@
+com\malskyi\kafka\exception\AuthorNotFoundException.class
+com\malskyi\kafka\controller\model\AuthorResponseDto.class
+com\malskyi\kafka\exception\handler\GlobalExceptionHandler$ExceptionResponse.class
+com\malskyi\kafka\controller\model\AuthorRequestDto.class
+com\malskyi\kafka\controller\model\AuthorResponseDto$BookInfoDto.class
+com\malskyi\kafka\handler\BookBusHandler.class
+com\malskyi\kafka\repository\BooksInfoEntityRepository.class
+com\malskyi\kafka\repository\AuthorEntityRepository.class
+com\malskyi\kafka\exception\handler\GlobalExceptionHandler.class
+com\malskyi\kafka\AuthorServiceApp.class
+com\malskyi\kafka\service\AuthorService.class
+com\malskyi\kafka\consumer\EventConsumerService.class
+com\malskyi\kafka\consumer\EventHandler.class
+com\malskyi\kafka\controller\AuthorController.class

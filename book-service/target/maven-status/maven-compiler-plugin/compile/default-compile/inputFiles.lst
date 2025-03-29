@@ -1,0 +1,13 @@
+F:\projects\java\kafka-producer-consumer\book-service\src\main\java\com\malskyi\kafka\BookServiceApp.java
+F:\projects\java\kafka-producer-consumer\book-service\src\main\java\com\malskyi\kafka\config\KafkaProducerConfig.java
+F:\projects\java\kafka-producer-consumer\book-service\src\main\java\com\malskyi\kafka\controller\BookController.java
+F:\projects\java\kafka-producer-consumer\book-service\src\main\java\com\malskyi\kafka\controller\model\BookRequestDto.java
+F:\projects\java\kafka-producer-consumer\book-service\src\main\java\com\malskyi\kafka\controller\model\BookResponseDto.java
+F:\projects\java\kafka-producer-consumer\book-service\src\main\java\com\malskyi\kafka\exception\AuthorNotFoundException.java
+F:\projects\java\kafka-producer-consumer\book-service\src\main\java\com\malskyi\kafka\exception\BookNotFoundException.java
+F:\projects\java\kafka-producer-consumer\book-service\src\main\java\com\malskyi\kafka\exception\handler\GlobalExceptionHandler.java
+F:\projects\java\kafka-producer-consumer\book-service\src\main\java\com\malskyi\kafka\repository\AuthorInfoEntityRepository.java
+F:\projects\java\kafka-producer-consumer\book-service\src\main\java\com\malskyi\kafka\repository\BookEntityRepository.java
+F:\projects\java\kafka-producer-consumer\book-service\src\main\java\com\malskyi\kafka\service\BookService.java
+F:\projects\java\kafka-producer-consumer\book-service\src\main\java\com\malskyi\kafka\service\publisher\EventPublisher.java
+F:\projects\java\kafka-producer-consumer\book-service\src\main\java\com\malskyi\kafka\service\publisher\KafkaEventPublisher.java
