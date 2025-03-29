@@ -5,6 +5,7 @@ spring:
     hibernate:
       ddl-auto: none
     show-sql: false
+  datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
 com:
   malskyi:
@@ -18,3 +19,6 @@ logging:
       springframework: INFO
       apache:
         kafka: INFO
+  file:
+    name: /var/log/author-service/author-service.log
+    pattern: /var/log/author-service/author-service.%d{yyyy-MM-dd}.%i.log

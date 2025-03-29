@@ -1,6 +1,6 @@
 spring:
   application:
-    name: server
+    name: author-service
   jpa:
     hibernate:
       ddl-auto: none

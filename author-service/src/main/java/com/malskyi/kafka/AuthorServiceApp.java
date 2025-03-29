@@ -15,8 +15,6 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @SpringBootApplication
 public class AuthorServiceApp implements CommandLineRunner {
 
-    @Value("${elasticsearch.api.key}")
-    private String ELASTICSEARCH_API_KEY;
     @Value("${logging.file.name}")
     private String loggingFileName;
     @Value("${logging.file.pattern}")
@@ -28,7 +26,6 @@ public class AuthorServiceApp implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        log.debug("ELASTICSEARCH_API_KEY: {}", ELASTICSEARCH_API_KEY);
         log.debug("loggingFileName: {}", loggingFileName);
         log.debug("loggingFilePattern: {}", loggingFilePattern);
     }

@@ -1,6 +1,6 @@
 spring:
   application:
-    name: server
+    name: author-service
   jpa:
     hibernate:
       ddl-auto: none
@@ -29,6 +29,3 @@ logging:
   file:
     name: ./logs/author-service
     pattern: ./logs/author-service
-elasticsearch:
-  api:
-    key: dktFeTNaVUJyeFpzNlp3d1F4Wks6bkU5ZjNjbFJSLXlmNVJKUlNYODE0UQ==
